@@ -11,7 +11,7 @@
   * `spring.application.name=[NAME]` it is important to identify the microservice and is used in other pieces of spring cloud infrastructure
   * `eureka.client.healthcheck.enabled=true` it is important to have actuator starter as dependency to avoid `NoClassDefFoundError: org/springframework/boot/actuate/health/HealthIndicato...`
 
-* [second eureka client service]()
+* [second eureka client service](https://github.com/maurofokker/spring-microservices-eureka-client)
 
 # Troubleshootings
 
