@@ -13,6 +13,15 @@
 
 * [second eureka client service](https://github.com/maurofokker/spring-microservices-eureka-client)
 
-# Troubleshootings
+## Service discovery using `RestTemplate`
+  * add property `eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/` for service discovery
+  * add `RestTemplate` bean and apply for that bean the annotation `@LoadBalanced`
+  * to discover with rest template
+    ```java
+      return this.restTemplate.getForObject("http://MYSECONDCLIENT/serviceinfo", String.class);
+    ```
+    * use app name registered in eureka server (spring app name) capitalized
+
+## Troubleshootings
 
 * [fixing eureka application status](https://jmnarloch.wordpress.com/2015/09/02/spring-cloud-fixing-eureka-application-status/)
